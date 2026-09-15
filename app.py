@@ -1,6 +1,7 @@
 import os
 import json
 import time
+import textwrap
 import joblib
 import numpy as np
 import pandas as pd
@@ -658,9 +659,23 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-user_query = st.chat_input(
-    "e.g. A dark psychological thriller with mind games and plot twists..."
-)
+col1, col2 = st.columns([6, 1])
+
+with col1:
+    user_query = st.text_input(
+        "Movie search",
+        placeholder="e.g. A dark psychological thriller with mind games and plot twists...",
+        label_visibility="collapsed"
+    )
+
+with col2:
+    search_clicked = st.button(
+        "?? Find",
+        use_container_width=True
+    )
+
+if not search_clicked:
+    user_query = None
 
 
 # =========================
