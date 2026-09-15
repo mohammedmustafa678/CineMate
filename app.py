@@ -1,4 +1,4 @@
-import os
+﻿import os
 import json
 import time
 import textwrap
@@ -104,7 +104,7 @@ User request:
 """
 
     response = client.models.generate_content(
-        model="gemini-3.5-flash",
+        model="gemini-3.5-flash-lite",
         contents=prompt
     )
 
@@ -449,7 +449,7 @@ Candidates:
 """
 
     response = client.models.generate_content(
-        model="gemini-3.5-flash",
+        model="gemini-3.5-flash-lite",
         contents=prompt
     )
 
@@ -793,3 +793,4 @@ if user_query:
                 movie_card,
                 unsafe_allow_html=True
             )
+
