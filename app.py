@@ -17,13 +17,6 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("🎬 CineMate")
-st.subheader("AI Movie Recommendation Assistant")
-
-st.write(
-    "Tell CineMate what kind of movie you're in the mood for."
-)
-
 @st.cache_resource
 def load_models():
 
