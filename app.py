@@ -670,7 +670,7 @@ with col1:
 
 with col2:
     search_clicked = st.button(
-        "?? Find",
+        "Find",
         use_container_width=True
     )
 
@@ -767,31 +767,29 @@ if user_query:
             start=1
         ):
 
+            movie_card = f"""
+<div class="movie-card">
+    <div class="movie-rank">#{rank}</div>
+
+    <div class="movie-title">
+        {movie['title']}
+    </div>
+
+    <div class="movie-genres">
+        {movie['genres']}
+    </div>
+
+    <div class="movie-score">
+        Match: {movie['score']}/100
+    </div>
+
+    <div class="movie-reason">
+        {movie['reason']}
+    </div>
+</div>
+"""
+
             st.markdown(
-                f"""
-                <div class="movie-card">
-
-                    <div class="movie-rank">
-                        #{rank}
-                    </div>
-
-                    <div class="movie-title">
-                        {movie['title']}
-                    </div>
-
-                    <div class="movie-genres">
-                        {movie['genres']}
-                    </div>
-
-                    <div class="movie-score">
-                        🎯 {movie['score']}/100 Match
-                    </div>
-
-                    <div class="movie-reason">
-                        {movie['reason']}
-                    </div>
-
-                </div>
-                """,
+                movie_card,
                 unsafe_allow_html=True
             )
