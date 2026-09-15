@@ -782,10 +782,6 @@ if user_query:
     <div class="movie-score">
         Match: {movie['score']}/100
     </div>
-
-    <div class="movie-reason">
-        {movie['reason']}
-    </div>
 </div>
 """
 
