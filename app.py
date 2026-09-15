@@ -789,8 +789,6 @@ if user_query:
 </div>
 """
 
-            st.markdown(
-                movie_card,
-                unsafe_allow_html=True
-            )
+            st.html(movie_card)
+
 
