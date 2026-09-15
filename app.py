@@ -71,6 +71,8 @@ def get_gemini_client():
 
 client = get_gemini_client()
 
+tags = pd.read_csv("data/tags.csv")
+
 def extract_preferences(user_message):
 
     prompt = f"""
